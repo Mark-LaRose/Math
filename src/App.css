@@ -1,18 +1,25 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100&family=Sacramento&family=Indie+Flower&display=swap');
+
+/* App component styling */
 .App {
   text-align: center;
 }
 
+/* Logo styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animation for logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,10 +31,12 @@
   color: white;
 }
 
+/* Link styling */
 .App-link {
   color: #61dafb;
 }
 
+/* Keyframe animation for logo spin */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +44,294 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Arrow styling */
+.arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Left arrow styling */
+.left-arrow::before, .right-arrow::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.left-arrow::before {
+  border-width: 12px 16px 12px 0;
+  margin-left: 240px;
+  margin-bottom: 30px;
+  border-color: transparent #111827 transparent transparent;
+}
+
+/* Right arrow styling */
+.right-arrow::before {
+  border-width: 12px 0 12px 16px;
+  margin-right: 240px;
+  margin-bottom: 30px;
+  border-color: transparent transparent transparent #111827;
+}
+
+/* Add button styling */
+.add-button {
+  background-color: rgb(43, 157, 233);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin-top: 30px;
+  margin-right: 22px;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Delete button styling */
+.delete-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 32px;
+  margin-left: 25px;
+  padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Toggle drawing button styling */
+.toggle-drawing {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 172px;
+  margin-top: -4px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Undo button styling */
+.undo-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 70px;
+  margin-top: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Redo button styling */
+.redo-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 160px;
+  margin-top: -25px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Page numbers styling */
+.page-numbers {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Emoji styling */
+.emoji {
+  display: inline-block;
+  font-size: 19px;
+  padding-bottom: 3px;
+  color: white;
+  filter: grayscale(100%);
+}
+
+/* Cheatsheet container styling */
+.cheatsheet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1%;
+  height: 705px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #1f2937;
+}
+
+/* Cheatsheet styling */
+.cheatsheet {
+  width: 1000px;
+  height: 660px;
+  overflow-y: auto;
+  background-color: #374151;
+  padding: 35px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Cheatsheet scrollbar styling */
+.cheatsheet::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cheatsheet::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 10px;
+}
+
+.cheatsheet::-webkit-scrollbar-thumb {
+  background-color: #1f2937;
+  border-radius: 10px;
+  border: 3px solid #374151;
+}
+
+/* Cheatsheet header styling */
+.cheatsheet h2 {
+  text-align: center;
+}
+
+/* Cheatsheet list styling */
+.cheatsheet ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cheatsheet li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Cheatsheet subheader styling */
+.cheatsheet h3 {
+  text-align: center;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  top: 5px;
+  right: 0px;
+  width: 60px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider styling */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111827;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #111827;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #111827;
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Calculator bottom row styling */
+.calculator-bottom-row {
+  width: 79.7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+  margin-top: -3rem;
+}
+
+/* Equals button styling */
+.equals-btn {
+  height: 100px;
+}
+
+/* Input placeholder styling */
+input::placeholder {
+  color: #32CD32;
 }
