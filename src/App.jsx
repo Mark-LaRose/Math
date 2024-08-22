@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react';
+import './styles/app.css';
+import './styles/cs.css';
+import './styles/notes.css';
 import Dropdown from './Dropdown';
 import Cheatsheet from './Cheatsheet';
 import Notes from './Notes';
@@ -143,16 +146,14 @@ function App() {
   };
 
   return (
-    <div className="relative h-screen bg-gray-900 text-white p-4">
+    <div className="relative min-h-screen bg-gray-900 text-white p-4">
       {/* Title of the calculator */}
-      <div className="absolute top-10 left-20">
-        <h1 className="text-9xl ml-60 mt-10 font-bold" style={{ fontFamily: 'Sacramento', transform: 'rotate(-15deg)' }}>
-          Math +
-        </h1>
-      </div>
-      <div className="flex flex-row justify-start items-start h-full" style={{ backgroundImage: 'url(path-to-your-image.jpg)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+        <div className="title">
+          <h1>Math +</h1>
+        </div>
+      <div className="flex flex-row justify-start items-start h-full">
         {/* Calculator display and buttons */}
-        <div className="calculator bg-gray-800 p-6 rounded-lg shadow-lg mr-5 ml-5 mt-60" style={{ width: '360px', height: '500px' }}>
+        <div className="calculator-container">
           <input
             ref={displayRef}
             type="text"
@@ -239,15 +240,17 @@ function App() {
           </div>
         </div>
         {/* Dropdown menu for selecting math type and displaying cheatsheet */}
-        <div className="flex flex-col items-center mx-4 mt-20">
+        <div className="flex-col items-center mx-4 mt-20 dropdown-container">
           <div className="flex mb-2 items-center">
             <Dropdown options={mathTypes} onSelect={setSelectedMathType} />
-            <span className="text-white ml-2">CheatSheet</span>
+            <span className="text-white ml-2 cheatsheet-text">CheatSheet</span>
           </div>
+        <div>
           <Cheatsheet selectedMathType={selectedMathType} />
         </div>
+      </div>
         {/* Notes component */}
-        <div className="flex items-center ml-4 mt-20">
+        <div className="notes-container">
           <Notes />
         </div>
       </div>

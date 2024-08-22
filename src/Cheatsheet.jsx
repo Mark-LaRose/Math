@@ -552,8 +552,8 @@ const Cheatsheet = ({ selectedMathType }) => {
   return (
     <div className="cheatsheet-container flex justify-center">
       <div className="cheatsheet bg-gray-800 p-10 rounded-lg shadow-lg text-white w-full max-w-screen-lg">
-        <h2 className="font-indie-flower text-7xl mb-7 mt-6 text-center">{selectedMathType}</h2>
-        <div className={isSingleColumn ? '' : 'grid grid-cols-2 gap-6'}>
+        <h2 className="font-indie-flower text-7xl mb-7 mt-6 text-center cs-header">{selectedMathType}</h2>
+        <div className={isSingleColumn ? 'cheatsheet-single-column' : 'cheatsheet-grid'}>
           {items.map((item, index) => (
             <div
               key={index}

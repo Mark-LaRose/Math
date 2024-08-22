@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './App.css'; // Ensure this import is present if not already
 
 /*
   Notes component
@@ -182,7 +181,7 @@ const Notes = () => {
   };
 
   return (
-    <div className="notes bg-gray-800 p-6 mt-12 rounded-lg shadow-lg text-white flex flex-col relative" style={{ width: '360px', height: '705px' }}>
+    <div className="notes bg-gray-800 p-6 mt-12 rounded-lg shadow-lg text-white flex flex-col relative">
       <h2 className="text-xl mb-2">Notes</h2>
       <div className="relative w-full h-full bg-gray-700 rounded">
         <textarea

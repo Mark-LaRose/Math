@@ -1,0 +1,481 @@
+.notes-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: -380px;
+  margin-top: 720px;
+  width: 500px;
+}
+
+.notes {
+  width: 360px;
+  height: 700px;
+}
+
+/* Arrow styling */
+.arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Left arrow styling */
+.left-arrow::before, .right-arrow::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.left-arrow::before {
+  border-width: 12px 16px 12px 0;
+  margin-left: 240px;
+  margin-bottom: 30px;
+  border-color: transparent #111827 transparent transparent;
+}
+
+/* Right arrow styling */
+.right-arrow::before {
+  border-width: 12px 0 12px 16px;
+  margin-right: 240px;
+  margin-bottom: 30px;
+  border-color: transparent transparent transparent #111827;
+}
+
+/* Add button styling */
+.add-button {
+  background-color: rgb(43, 157, 233);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin-top: 30px;
+  margin-right: 22px;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Delete button styling */
+.delete-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 32px;
+  margin-left: 25px;
+  padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* Toggle drawing button styling */
+.toggle-drawing {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 172px;
+  margin-top: -4px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Undo button styling */
+.undo-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 70px;
+  margin-top: 36px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Redo button styling */
+.redo-button {
+  background: #111827;
+  border: 2px solid #111827;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 160px;
+  margin-top: -25px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Page numbers styling */
+.page-numbers {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Emoji styling */
+.emoji {
+  display: inline-block;
+  font-size: 19px;
+  padding-bottom: 3px;
+  color: white;
+  filter: grayscale(100%);
+}
+
+
+/*  ---------------------------    Media Queries   ------------------------  */
+
+
+/* Media query for min-width: 768px (e.g., small tablets like iPad Mini) */
+@media screen and (min-width: 768px) {
+
+  .notes-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;  /* Tailwind's ml-4 */
+    margin-top: 60px;
+  }
+
+  .notes {
+    width: 310px;
+    height: 425px;
+  }
+
+  /* Undo button styling */
+  .undo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 40px;
+    margin-top: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Redo button styling */
+  .redo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 120px;
+    margin-top: -25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Toggle drawing button styling */
+  .toggle-drawing {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 138px;
+    margin-top: -5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+}
+
+
+/*  ----------------------------------------------------------------------  */
+
+
+/* Media query for min-width: 1024px (e.g., larger tablets like iPad in landscape mode) */
+@media screen and (min-width: 1024px) {
+
+  .notes-container {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;  /* Tailwind's ml-4 */
+    margin-top: 60px;
+  }
+
+  .notes {
+    width: 520px;
+    height: 600px;
+  }
+
+  /* Undo button styling */
+  .undo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 140px;
+    margin-top: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Redo button styling */
+  .redo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 220px;
+    margin-top: -25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Toggle drawing button styling */
+  .toggle-drawing {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 238px;
+    margin-top: -5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+}
+
+
+/*  ----------------------------------------------------------------------  */
+
+
+/* Media query for min-width: 1280px (e.g., desktops, larger laptops) */
+@media screen and (min-width: 1280px) {
+
+  .notes-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 1516px;  /* Tailwind's ml-4 */
+    margin-top: 76px;   /* Tailwind's mt-20 */
+    width: 360px;
+  }
+
+  .notes {
+    width: 400px;
+    height: 710px;
+  }
+
+  /* Arrow styling */
+  .arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Left arrow styling */
+  .left-arrow::before, .right-arrow::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .left-arrow::before {
+    border-width: 12px 16px 12px 0;
+    margin-left: 240px;
+    margin-bottom: 30px;
+    border-color: transparent #111827 transparent transparent;
+  }
+
+  /* Right arrow styling */
+  .right-arrow::before {
+    border-width: 12px 0 12px 16px;
+    margin-right: 240px;
+    margin-bottom: 30px;
+    border-color: transparent transparent transparent #111827;
+  }
+
+  /* Add button styling */
+  .add-button {
+    background-color: rgb(43, 157, 233);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    margin-top: 30px;
+    margin-right: 22px;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* Delete button styling */
+  .delete-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 32px;
+    margin-left: 25px;
+    padding-bottom: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Toggle drawing button styling */
+  .toggle-drawing {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 172px;
+    margin-top: -4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Undo button styling */
+  .undo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 70px;
+    margin-top: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Redo button styling */
+  .redo-button {
+    background: #111827;
+    border: 2px solid #111827;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: 160px;
+    margin-top: -25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  /* Page numbers styling */
+  .page-numbers {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* Emoji styling */
+  .emoji {
+    display: inline-block;
+    font-size: 19px;
+    padding-bottom: 3px;
+    color: white;
+    filter: grayscale(100%);
+  }
+}
